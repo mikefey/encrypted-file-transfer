@@ -1,0 +1,86 @@
+.content.upload {
+  .choose-file-content {
+    &.file-selected {
+      .choose-file-wrapper {
+        display: none;
+      }
+
+      .file-name-wrapper {
+        display: inline-block;
+      }
+    }
+  }
+
+  .choose-file-wrapper {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+  }
+
+  .choose-file-button {
+    @include button;
+  }
+
+  .choose-file-input {
+    cursor: pointer;
+    height: 100%;
+    left: 0;
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+
+  .file-name-wrapper {
+    display: none;
+    position: relative;
+    width: 100%;
+  }
+
+  .choose-file-name {
+    display: inline-block;
+  }
+
+  .choose-file-remove-button {
+    background: none;
+    border: 0;
+    color: $gunmetal;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 24px;
+    height: 40px;
+    margin: -14px 0 0 10px;
+    position: relative;
+    transition: color .2s ease-out;
+    width: 40px;
+
+    &:hover {
+      color: $madder-lake;
+
+      .icon {
+        border: 1px solid $madder-lake;
+      }
+    }
+
+    .icon {
+      border: 1px solid $gunmetal;
+      border-radius: 50%;
+      display: inline-block;
+      height: 24px;
+      left: 0;
+      margin: 8px 0 0 8px;
+      position: absolute;
+      top: -5px;
+      transition: border .2s ease-out;
+      width: 24px;
+
+      &::before {
+        content: '✕';
+        left: 0;
+        margin: -6px 0 0 4px;
+        position: absolute;
+        top: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,91 @@
+@import './reset';
+@import './colors';
+@import './mixins';
+@import './loader';
+@import './upload/upload-app';
+@import './upload/choose-file-section';
+@import './upload/password-section';
+@import './upload/upload-button-section';
+@import './upload/upload-complete-section';
+@import './download/download-app';
+
+html {
+  background-color: $gainsboro;
+  box-sizing: border-box;
+  color: $gunmetal;
+  font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-size: 16px;
+}
+
+html,
+body {
+  line-height: 1.4em;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+strong {
+  font-weight: 700;
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+}
+
+.header {
+  font-size: 24px;
+  padding: 60px 0 40px;
+  text-align: center;
+}
+
+.logo {
+  color: $gunmetal;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.content {
+  margin: 0 auto;
+  max-width: 545px;
+  padding: 20px;
+  text-align: left;
+  width: 100%;
+
+  &.show-error-message {
+    .error-message {
+      display: block;
+    }
+  }
+}
+
+.error-message,
+.success-message {
+  background-color: rgba($madder-lake, .1);
+  border: 1px solid $madder-lake;
+  border-radius: 4px;
+  color: $madder-lake;
+  display: none;
+  margin-bottom: 20px;
+  padding: 20px;
+
+  a {
+    color: $madder-lake;
+    font-weight: bold;
+  }
+}
+
+.success-message {
+  background-color: rgba($skobeloff, .1);
+  border: 1px solid $skobeloff;
+  color: $skobeloff;
+  display: block;
+
+  a {
+    color: $skobeloff;
+  }
+}

@@ -1,0 +1,20 @@
+.content.upload {
+  &.show-upload-button-section {
+    .upload-button-section {
+      display: flex;
+    }
+  }
+
+  .upload-button-section {
+    display: none;
+  }
+
+  .upload-file-button,
+  .cancel-upload-button {
+    @include button;
+  }
+
+  .cancel-upload-button {
+    @include button-secondary;
+  }
+}

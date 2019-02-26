@@ -1,0 +1,43 @@
+<section class="content upload">
+  <%= form_for @changeset, Routes.encrypted_file_path(@conn, :create), [class: "create-file-form"], fn _ -> %>
+    <div class="error-message"></div>
+    <ol class="steps">
+      <li class="step choose-file-section">
+        <strong class="step-order">1.</strong>
+        <div class="step-content">
+          <div class="choose-file-content">
+            <div class="choose-file-wrapper">
+              <div class="choose-file-button">
+                <span class="description">Click to choose a file from your device or drag a file here</span>
+                <input class="choose-file-input" type="file" name="file" />
+              </div>
+            </div>
+            <div class="file-name-wrapper">
+              <div class="choose-file-name"></div>
+              <button class="choose-file-remove-button" type="button"><span class="icon"></span></button>
+            </div>
+          </div>
+        </div>
+      </li>
+      <li class="step password-section">
+        <strong class="step-order">2.</strong>
+        <div class="step-content">
+          <label class="password-input-label">Enter a password for your file:</label>
+          <input class="password-input" type="password" name="password" placeholder="Password">
+          <div class="password-hint">Must be at least 8 characters</div>
+        </div>
+      </li>
+      <li class="step upload-button-section">
+        <strong class="step-order">3.</strong>
+        <div class="step-content">
+          <label class="password-input-label">Upload your file:</label>
+          <button class="upload-file-button" type="submit">Upload file</button>
+          <button class="cancel-upload-button" type="button">Cancel</button>
+        </div>
+      </li>
+      <li class="step upload-complete-section">
+        <div class="success-message"></div>
+      </li>
+    </ol>
+  <% end %>
+</section>

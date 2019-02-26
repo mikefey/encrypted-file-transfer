@@ -1,0 +1,13 @@
+<section class="content download">
+  <%= form_for @conn, Routes.encrypted_file_path(@conn, :download, @id), [class: "download-file-form"], fn _ -> %>
+    <div class="error-message"></div>
+    <div class="section password">
+      <label class="password-input-label">Enter password:</label>
+      <input class="password-input" type="password" name="password" placeholder="Password">
+      <button class="download-file-button" type="submit">Download file</button>
+    </div>
+    <div class="section download-link">
+      <div class="success-message"></div>
+    </div>
+  <% end %>
+</section>

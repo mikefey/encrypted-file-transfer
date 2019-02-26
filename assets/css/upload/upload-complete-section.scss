@@ -1,0 +1,12 @@
+.content.upload {
+  .upload-complete-section {
+    border-top: 0;
+    display: none;
+  }
+
+  &.show-complete-section {
+    .upload-complete-section {
+      display: block;
+    }
+  }
+}

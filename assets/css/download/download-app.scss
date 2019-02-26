@@ -1,0 +1,50 @@
+.content.download {
+  &.hide-all-sections {
+    .section {
+      display: none;
+    }
+  }
+
+  &.submitting-data {
+    .section {
+      opacity: .1;
+      pointer-events: none;
+    }
+  }
+
+  &.show-download-link {
+    .section.download-link {
+      display: block;
+    }
+  }
+
+  .section {
+    margin-bottom: 40px;
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+
+    &.password {
+      padding-top: 0;
+    }
+
+    &.download-link {
+      display: none;
+    }
+  }
+
+  .password-input-label {
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .password-input {
+    @include input;
+    margin-bottom: 40px;
+  }
+
+  .download-file-button {
+    @include button;
+  }
+}

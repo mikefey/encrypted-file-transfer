@@ -1,0 +1,47 @@
+
+.content.upload {
+  &.hide-all-sections {
+    .steps {
+      display: none;
+    }
+  }
+
+  &.show-complete-section {
+    .step {
+      display: none;
+    }
+  }
+
+  &.submitting-data {
+    .steps {
+      opacity: .1;
+      pointer-events: none;
+    }
+
+    .cancel-upload-button {
+      display: none;
+    }
+  }
+
+  .step {
+    border-top: 1px solid rgba($gunmetal, .2);
+    display: flex;
+    margin-bottom: 20px;
+    padding-top: 40px;
+    position: relative;
+    width: 100%;
+
+    &:first-child {
+      border-top: 0;
+      padding-top: 0;
+    }
+  }
+
+  .step-order {
+    width: 40px;
+  }
+
+  .step-content {
+    width: 100%;
+  }
+}

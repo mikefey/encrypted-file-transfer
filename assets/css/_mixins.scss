@@ -1,0 +1,38 @@
+@mixin button {
+  background-color: $skobeloff;
+  border: 0;
+  border-radius: 4px;
+  color: $light-cyan;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 19px;
+  transition: background-color .2s ease-out, color .2s ease-out;
+
+  &:hover {
+    background-color: $light-cyan;
+    color: $skobeloff;
+  }
+}
+
+@mixin button-secondary {
+  @include button;
+
+  background-color: $gainsboro;
+  border: 1px solid $madder-lake;
+  color: $madder-lake;
+  margin-left: 20px;
+
+  &:hover {
+    background-color: $madder-lake;
+    color: $gainsboro;
+  }
+}
+@mixin input {
+  background-color: $light-cyan;
+  border: 1px solid $gunmetal;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 20px;
+  position: relative;
+  width: 100%;
+}
