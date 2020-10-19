@@ -16,7 +16,6 @@ config :encrypted_file_transfer, EncryptedFileTransferWeb.Endpoint,
       "node_modules/webpack/bin/webpack.js",
       "--mode",
       "development",
-      "--watch-stdin",
       cd: Path.expand("../assets", __DIR__)
     ]
   ]
@@ -65,13 +64,5 @@ config :phoenix, :stacktrace_depth, 20
 
 # Initialize plugs at runtime for faster development compilation
 config :phoenix, :plug_init_mode, :runtime
-
-# Configure your database
-config :encrypted_file_transfer, EncryptedFileTransfer.Repo,
-  username: "",
-  password: "",
-  database: "encrypted_file_transfer_dev",
-  hostname: "localhost",
-  pool_size: 10
 
 import_config "dev.secret.exs"

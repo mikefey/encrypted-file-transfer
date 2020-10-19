@@ -11,9 +11,10 @@ defmodule EncryptedFileTransfer.Application do
       # Start the Ecto repository
       EncryptedFileTransfer.Repo,
       # Start the endpoint when the application starts
-      EncryptedFileTransferWeb.Endpoint
+      EncryptedFileTransferWeb.Endpoint,
       # Starts a worker by calling: EncryptedFileTransfer.Worker.start_link(arg)
       # {EncryptedFileTransfer.Worker, arg},
+      {Phoenix.PubSub, [name: EncryptedFileTransfer.PubSub, adapter: Phoenix.PubSub.PG2]}
     ]
 
     # See https://hexdocs.pm/elixir/Supervisor.html

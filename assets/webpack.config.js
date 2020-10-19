@@ -42,7 +42,11 @@ module.exports = (env, options) => ({
   plugins: [
     new ForkTsCheckerWebpackPlugin(),
     new MiniCssExtractPlugin({ filename: '../css/index.css' }),
-    new CopyWebpackPlugin([{ from: 'static/', to: '../' }])
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: 'static/', to: '../' },
+      ]
+    }),
   ],
   resolve: {
     extensions: ['.ts', '.js']
